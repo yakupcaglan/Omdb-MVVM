@@ -35,4 +35,9 @@ final class SearchView: LayoutableView {
             $0.edges.equalTo(self)
         }
     }
+    
+    func set(dataSource: UITableViewDataSource, delegate: UITableViewDelegate) {
+        tableView.dataSource = dataSource
+        tableView.delegate = delegate
+    }
 }

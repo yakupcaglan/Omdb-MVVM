@@ -37,8 +37,8 @@ final class SearchViewController: BaseViewController<SearchView> {
         navigationItem.largeTitleDisplayMode = .automatic
         view.backgroundColor = AppStyle.Colors.mainBackgroundColor
 
-        tableView.delegate = self
-        tableView.dataSource = self
+        layoutableView.set(dataSource: self, delegate: self)
+        
         viewModel.delegate = self
         
         setupSearchBar()
