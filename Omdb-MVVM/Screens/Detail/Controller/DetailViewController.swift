@@ -12,6 +12,8 @@ import Firebase
 
 final class DetailViewController: BaseViewController<DetailView> {
     
+    weak var coordinotor: MainCoordinator?
+    
     // MARK:- Life Cycle
     
     private var viewModel: DetailViewModelProtocol

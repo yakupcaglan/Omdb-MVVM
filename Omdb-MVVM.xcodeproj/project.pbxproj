@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0461045C2579026700A188BD /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0461045B2579026700A188BD /* Coordinator.swift */; };
+		0461045F2579026F00A188BD /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0461045E2579026F00A188BD /* MainCoordinator.swift */; };
+		04610462257916AA00A188BD /* SearchCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04610461257916AA00A188BD /* SearchCoordinator.swift */; };
+		0461046525791C1100A188BD /* DetailViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0461046425791C1100A188BD /* DetailViewCoordinator.swift */; };
+		04610528257944CA00A188BD /* SplashCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04610527257944CA00A188BD /* SplashCoordinator.swift */; };
 		AAE4FECB2F8A294A48694EA6 /* Pods_Omdb_MVVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8E086A22725186923689642 /* Pods_Omdb_MVVM.framework */; };
 		C111CDEF246F93EC002EA598 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C111CDEE246F93EC002EA598 /* SplashView.swift */; };
 		C111CDF1246F93F7002EA598 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C111CDF0246F93F7002EA598 /* SplashViewController.swift */; };
@@ -44,6 +49,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0461045B2579026700A188BD /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		0461045E2579026F00A188BD /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		04610461257916AA00A188BD /* SearchCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCoordinator.swift; sourceTree = "<group>"; };
+		0461046425791C1100A188BD /* DetailViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewCoordinator.swift; sourceTree = "<group>"; };
+		04610527257944CA00A188BD /* SplashCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashCoordinator.swift; sourceTree = "<group>"; };
 		0DAB1F0E97DE49400C39F1EB /* Pods-Omdb-MVVM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Omdb-MVVM.debug.xcconfig"; path = "Target Support Files/Pods-Omdb-MVVM/Pods-Omdb-MVVM.debug.xcconfig"; sourceTree = "<group>"; };
 		709B3762059EE73352F2969A /* Pods-Omdb-MVVM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Omdb-MVVM.release.xcconfig"; path = "Target Support Files/Pods-Omdb-MVVM/Pods-Omdb-MVVM.release.xcconfig"; sourceTree = "<group>"; };
 		C105EC21246DDFB3007323A8 /* FjallaOne-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FjallaOne-Regular.otf"; sourceTree = "<group>"; };
@@ -96,6 +106,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0461045A2579025400A188BD /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				0461045B2579026700A188BD /* Coordinator.swift */,
+				0461045E2579026F00A188BD /* MainCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
 		1531D711022CFE8D1FF2E985 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -135,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				C111CDF0246F93F7002EA598 /* SplashViewController.swift */,
+				04610527257944CA00A188BD /* SplashCoordinator.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -198,6 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				C1D13CC8246C27F80086BEB2 /* App */,
+				0461045A2579025400A188BD /* Coordinator */,
 				C135BE6C24706F29006C4B9F /* Network */,
 				C1D13CB8246C26E50086BEB2 /* Screens */,
 				C135BE7524707014006C4B9F /* Managers */,
@@ -255,6 +276,7 @@
 			isa = PBXGroup;
 			children = (
 				C1D13CBC246C273C0086BEB2 /* DetailViewController.swift */,
+				0461046425791C1100A188BD /* DetailViewCoordinator.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -281,6 +303,7 @@
 			isa = PBXGroup;
 			children = (
 				C1D13CB3246C26A80086BEB2 /* SearchViewController.swift */,
+				04610461257916AA00A188BD /* SearchCoordinator.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -458,6 +481,8 @@
 			files = (
 				C135BE672470381D006C4B9F /* SearchResponse.swift in Sources */,
 				C17438D9246D10D1003B0E81 /* SearchCell.swift in Sources */,
+				0461046525791C1100A188BD /* DetailViewCoordinator.swift in Sources */,
+				0461045C2579026700A188BD /* Coordinator.swift in Sources */,
 				C18BB052246E6E4E00445A34 /* ViewControllerFactory.swift in Sources */,
 				C1D13CD2246C32A40086BEB2 /* TableViewCell.swift in Sources */,
 				C18BB050246E6E2600445A34 /* DependencyContainer.swift in Sources */,
@@ -467,6 +492,8 @@
 				C1D13CD4246C330B0086BEB2 /* TableView+Register.swift in Sources */,
 				C1D13CD9246C34D60086BEB2 /* AppStyle.swift in Sources */,
 				C17438DF246D114F003B0E81 /* SearchMovieItem.swift in Sources */,
+				04610528257944CA00A188BD /* SplashCoordinator.swift in Sources */,
+				04610462257916AA00A188BD /* SearchCoordinator.swift in Sources */,
 				C135BE7924707034006C4B9F /* RemoteConfigManager.swift in Sources */,
 				C111CDF1246F93F7002EA598 /* SplashViewController.swift in Sources */,
 				C1D13CB6246C26C10086BEB2 /* SearchViewModel.swift in Sources */,
@@ -475,6 +502,7 @@
 				C135BE7424706FE0006C4B9F /* MovieNetworkService.swift in Sources */,
 				C18BB056246EBF4800445A34 /* BaseViewController.swift in Sources */,
 				C1D13C9E246C24880086BEB2 /* AppDelegate.swift in Sources */,
+				0461045F2579026F00A188BD /* MainCoordinator.swift in Sources */,
 				C1D13CBB246C27290086BEB2 /* DetailView.swift in Sources */,
 				C111CDEF246F93EC002EA598 /* SplashView.swift in Sources */,
 				C1D13CBF246C275C0086BEB2 /* DetailViewModel.swift in Sources */,

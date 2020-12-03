@@ -13,6 +13,8 @@ final class SearchViewController: BaseViewController<SearchView> {
     
     // MARK: - Properties
     
+    var coordinator: MainCoordinator?
+
     private var tableView: UITableView { layoutableView.tableView }
     
     private lazy var indicator: UIActivityIndicatorView = {
@@ -143,11 +145,7 @@ extension SearchViewController: UITableViewDataSource  {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         guard let item = viewModel.item(by: indexPath.row) else { return }
-    
-        let container = DependencyContainer()
-        let detailViewController = container.makeDetailViewController(movieID: item.imdbID)
-        
+        coordinator?.presentDetailView(id: item.imdbID)
         tableView.deselectRow(at: indexPath, animated: true)
-        navigationController?.pushViewController(detailViewController, animated: true)
     }
 }

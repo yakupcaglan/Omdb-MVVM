@@ -10,6 +10,7 @@ import UIKit
 
 final class SplashViewController: BaseViewController<SplashView> {
     
+    var coordinator: MainCoordinator?
     
     // MARK:- Properties
     
@@ -39,12 +40,7 @@ extension SplashViewController: SplashViewModelDelegate {
             
         } else {
             DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3) {
-                let container = DependencyContainer()
-                let searchViewController = container.makeSearchViewController()
-                let navigationController = UINavigationController(rootViewController: searchViewController)
-                navigationController.modalTransitionStyle = .crossDissolve
-                navigationController.modalPresentationStyle = .fullScreen
-                self.present(navigationController, animated: true)
+                self.coordinator?.presentSearch()
             }
         }
     }

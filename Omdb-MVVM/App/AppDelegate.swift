@@ -14,6 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     var window: UIWindow?
+    var coordinator: MainCoordinator?
     
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -21,13 +22,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         RemoteConfigManager.shared.configure(exprationDuration: 500)
         
-        let dependencyContainer = DependencyContainer()
-        let splashViewController = dependencyContainer.makeSplashViewController()
-        
+        let navController = UINavigationController()
+        coordinator = MainCoordinator(navigationController: navController)
+        coordinator?.start()
         setupNavigationBarAppearance()
-        
+    
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = splashViewController
+        window?.rootViewController = navController
         window?.makeKeyAndVisible()
         
         return true

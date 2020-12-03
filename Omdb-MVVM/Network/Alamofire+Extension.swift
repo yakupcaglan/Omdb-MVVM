@@ -9,13 +9,7 @@
 import Alamofire
 
 extension Session {
-    
-    /// Performs the network request with given parameters.
-    ///
-    /// - Parameters:
-    ///   - endpoint: EndpointType.
-    ///   - dataType: Decodable.
-    ///   - completion: Result<Decodable, NetworkError>.
+
     func request<T: EndpointType, E: Decodable>(endpoint: T, dataType: E.Type, requestQueue: DispatchQueue, completion: @escaping (Result<E, NetworkError>) -> Void) {
         guard let endpointURL = endpoint.url else {
             completion(.failure(.invalidURI))
